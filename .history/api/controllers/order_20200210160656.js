@@ -18,7 +18,7 @@ exports.orders_get_all =  (req,res,next)=>{
                     quantity: doc.quantity,
                     request :{
                         type : 'GET',
-                        url : url+'/orders'+ doc._id
+                        url : url+'/orders/'+ doc._id
                     }
 
                 }
@@ -64,7 +64,7 @@ exports.orders_create_order =  (req,res,next)=>{
             },
             request : {
                 type: 'GET',
-                url: url+'/orders' + result._id
+                url: url+'/orders/' + result._id
             }
         })
     })

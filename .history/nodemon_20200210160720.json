@@ -2,6 +2,8 @@
     "env" : {
         "MONGO_ATLAS_PW" : "'Facebookisgreat123!'",
         "JWT_KEY": "secret",
-        "url":"http://localhost:4000"
+        "url":"localhost:4000"
     }
 }
+
+// https://node-rest-shopp.herokuapp.com

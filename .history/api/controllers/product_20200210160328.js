@@ -19,7 +19,7 @@ exports.products_get_all = (req,res,next)=>{
                     _id: doc._id,
                     request :{
                         type : 'GET',
-                        url : url+'/products/'+doc._id
+                        url : url+doc._id
                     }
                 }
             })
@@ -50,7 +50,7 @@ exports.products_get_product = (req,res,next)=>{
                 request:{
                     type: 'GET',
                     description : '',
-                    url:  url+'/products/'+doc._id
+                    url:  url+'/products'+doc._id
                 }
             })
         }
@@ -85,7 +85,7 @@ exports.products_create_product = (req,res,next)=>{
                 _id: result._id,
                 request :{
                     type: 'GET',
-                    url:  url+'/products/'+result._id
+                    url:  'http://localhost:4000/products/'+result._id
                 }
             }
     
@@ -115,7 +115,7 @@ exports.products_update_product = (req,res,next)=>{
             message: 'Product Updated',
             request:{
                 type:'GET',
-                url:  url+'/products/'+id
+                url:  'http://localhost:4000/products/'+id
             }
         })
     })
@@ -136,7 +136,7 @@ exports.products_delete_product = (req,res,next)=>{
             message: 'Product deleted',
             request: {
                 type: 'POST',
-                url : url+'/products/',
+                url : 'http://localhost:4000/products',
                 body: { name: 'String', price: 'Number' }
             }
         })

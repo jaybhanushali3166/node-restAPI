@@ -20,8 +20,7 @@ router.post('/signup', (req, res, next) => {
             });
         }
         else
-        {   
-        
+        {
             bcrypt.hash(req.body.password, 10, (err, hash) => {
                 console.log("in signup api");
                 
